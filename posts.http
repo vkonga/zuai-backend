@@ -1,0 +1,55 @@
+### Register User
+POST http://localhost:5000/signup/
+Content-Type: application/json
+
+{
+  "id": "2",
+  "username": "user2",
+  "password": "password123"
+}
+
+### Login User
+POST http://localhost:5000/login/
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "password123"
+}
+
+###
+POST http://localhost:5000/post/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJpYXQiOjE3MjQ0ODg1MDR9.BkYiNogV-HRt-1iRarpdbZVAYkUwsE53O8_UOmCNUSE
+
+{
+    "id":"1",
+    "title":"Hi",
+    "content":"Hi world",
+    "createdAt":"2024-08-24T10:00:00Z"
+}
+
+###
+GET http://localhost:5000/posts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJpYXQiOjE3MjQ0ODg1MDR9.BkYiNogV-HRt-1iRarpdbZVAYkUwsE53O8_UOmCNUSE
+
+###
+GET http://localhost:5000/posts/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJpYXQiOjE3MjQ0ODg1MDR9.BkYiNogV-HRt-1iRarpdbZVAYkUwsE53O8_UOmCNUSE
+
+
+###
+PUT http://localhost:5000/post/1/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJpYXQiOjE3MjQ0ODg1MDR9.BkYiNogV-HRt-1iRarpdbZVAYkUwsE53O8_UOmCNUSE
+
+{
+    "id":"1",
+    "title":"Hello",
+    "content":"Hello world, I am out",
+    "createdAt":"2024-08-24T10:00:00Z"
+}
+
+###
+DELETE http://localhost:5000/post/2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJpYXQiOjE3MjQ0ODg1MDR9.BkYiNogV-HRt-1iRarpdbZVAYkUwsE53O8_UOmCNUSE
